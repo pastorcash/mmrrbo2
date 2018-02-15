@@ -1,0 +1,109 @@
+/* Basic styles */
+/* html, body {
+	margin: 0;
+}
+
+body{
+  background: rgb(187, 187, 187);
+} */
+
+h1, h2, h3, h4 {
+  padding-bottom: 15px;
+}
+ h2 {
+  background-color: #8e44ad;
+  color: #fff;
+  padding-top: 15px;
+  padding-left: 15px; 
+ }
+
+article, aside, section, nav, figure, header, footer {
+	display: block;
+}
+
+.location-form {
+  width: 80%;
+	margin: 0 auto;
+	padding: 2%;
+  line-height: 1.2;
+  font-family: 'Muli', 'Open Sans', 'Montserrat', sans-serif;
+  margin-right: -2em;
+  /* background: #fff; */
+}
+
+.form-group {
+  background: #fff;
+  margin-bottom: 1em;
+  padding: 10px;
+  margin-right: 2em;
+}
+
+.form-group ul {
+  list-style: none;
+  margin: 0 0 2em;
+  padding: 0;
+}
+
+.form-group li {
+  margin-bottom: 0.5em;
+}
+
+.form-group h3 {
+  margin-bottom: 1em;
+}
+
+.form-fields input[type="text"],
+.form-fields input[type="email"],
+.form-fields select {
+  box-sizing: border-box;
+  padding: 0.6em 0.8em;
+  color: #999;
+  background: #f7f7f7;
+  border: 1px solid #e1e1e1;
+  border-radius: 5%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.9em;
+  text-decoration: none;
+  line-height: normal;
+  max-height: 3em;
+}
+
+.form-fields input[type="text"]:focus,
+.form-fields select:focus {
+  color: #333;
+  border: 1px solid #8e44ad;
+  outline: none;
+  background: #f2f2f2;
+}
+
+.btn-cancel {
+color: btn-primary;
+}
+
+/* Flex it */
+.location-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1 0 300px;
+}
+
+.form-fields li {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-fields input[type="text"],
+.form-fields input[type="email"],
+.form-fields select {
+  flex: 1 0 230px;
+}
+
+.form-fields label {
+  flex: 1 0 90px;
+  max-width: 200px;
+}

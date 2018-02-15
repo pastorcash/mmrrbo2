@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -13,6 +15,7 @@ import { LocationListComponent } from './locations/location-list/location-list.c
 import { ContactsComponent } from './contacts/contacts.component';
 import { StudentListComponent } from './students/student-list/student-list.component';
 import { TeacherListComponent } from './teachers/teacher-list/teacher-list.component';
+import { LocationDetailComponent } from './locations/location-detail/location-detail.component';
 
 
 @NgModule({
@@ -26,7 +29,8 @@ import { TeacherListComponent } from './teachers/teacher-list/teacher-list.compo
     LocationListComponent,
     ContactsComponent,
     StudentListComponent,
-    TeacherListComponent
+    TeacherListComponent,
+    LocationDetailComponent
   ],
   imports: [
     BrowserModule,
