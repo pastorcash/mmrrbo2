@@ -1,7 +1,8 @@
 /* Navigation Bar
 -------------------------------------------------- */
 .navbar {
-  background-color: #563d7c;
+  /* background-color: #563d7c; */
+  background-color: #372e5f;
 }
 .navbar .navbar-brand {
   color: #fff;
