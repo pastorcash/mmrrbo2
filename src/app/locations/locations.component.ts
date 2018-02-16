@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./locations.component.css']
 })
 export class LocationsComponent implements OnInit {
-
+  customClass = 'customClass';
+  isFirstOpen = true;
   constructor() { }
 
   ngOnInit() {
