@@ -6,11 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./location-detail.component.css']
 })
 export class LocationDetailComponent implements OnInit {
+  customClass = 'customClass';
   status: any = {
     isFirstOpen: true,
     isFirstDisabled: false
   };
-  customClass: 'customClass';
 
   constructor() { }
 

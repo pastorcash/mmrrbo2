@@ -18,11 +18,6 @@ h1, h2, h3, h4 {
   padding-top: 15px;
   padding-left: 15px; 
  }
- 
- .card.customClass, .card.customClass .card-header, .panel.customClass {
-  background-color: #6e4ca3;
-  color: #333;
-}
 
 article, aside, section, nav, figure, header, footer {
 	display: block;
@@ -114,4 +109,20 @@ article, aside, section, nav, figure, header, footer {
   flex: 1 0 90px;
   max-width: 200px;
   text-align: left;
+}
+
+/* Accordion styling */
+/* *** This is STILL not working *** */
+.card.customClass,
+.card.customClass .card-header,
+.panel.customClass {
+  background-color: #5bc0de;
+  color: #fff;
+}
+.panel.customClass .panel-body {
+  background-color: #337aa7;
+}
+.panel-heading.card-header {
+  background-color: purple;
+  color: white;
 }
