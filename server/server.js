@@ -3,14 +3,14 @@ require('./config/config');
 const _ = require('lodash');
 const express = require('express');
 const bodyParser = require('body-parser');
-const {ObjectID} = require('mongodb');
+const { ObjectID } = require('mongodb');
 
-const {mongoose} = require('./db/mongoose');
-const {User} = require('./models/user');
-const {Location} = require('./models/location');
-const {Student} = require('./models/student');
+const { mongoose } = require('./db/mongoose');
+const { User } = require('./models/user');
+const { Location } = require('./models/location');
+const { Student } = require('./models/student');
 const { Course } = require('./models/course');
-const {authenticate} = require('./middleware/authenticate');
+const { authenticate } = require('./middleware/authenticate');
 
 const app = express();
 const port = process.env.PORT;
