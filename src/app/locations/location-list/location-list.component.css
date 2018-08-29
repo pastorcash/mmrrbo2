@@ -1,0 +1,13 @@
+.theadcolor {
+  background-color: #8e44ad;
+  color: #ffffff;
+}
+
+.tablewrap {
+  width: 80%;
+	margin: 0 auto;
+	padding: 2%;
+  line-height: 1.2;
+  font-family: 'Muli', 'Open Sans', 'Montserrat', sans-serif;
+  margin-right: -2em;
+}
