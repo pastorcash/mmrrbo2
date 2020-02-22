@@ -1,4 +1,4 @@
- {
+{
   "name": "mmrrbo2",
   "version": "0.0.0",
   "license": "MIT",
@@ -38,7 +38,7 @@
     "mongoose-validators": "^0.1.0",
     "ngx-bootstrap": "^2.0.5",
     "popper.js": "^1.14.4",
-    "rxjs": "^6.2.2",
+    "rxjs": "^6.5.4",
     "validator": "^9.4.1",
     "zone.js": "^0.8.26",
     "rxjs-compat": "^6.0.0-rc.0"
