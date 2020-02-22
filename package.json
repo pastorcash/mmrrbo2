@@ -50,7 +50,7 @@
     "@angular/compiler-cli": "^9.0.2",
     "@angular/language-service": "^9.0.2",
     "@types/jasmine": "~2.5.53",
-    "@types/jasminewd2": "~2.0.2",
+    "@types/jasminewd2": "~2.0.8",
     "@types/node": "^6.0.116",
     "codelyzer": "^5.2.1",
     "expect": "^25.1.0",
