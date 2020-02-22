@@ -41,7 +41,6 @@
     "rxjs": "^6.5.4",
     "rxjs-compat": "^6.5.4",
     "tslib": "^1.11.0",
-    "typescript": "^3.7.5",
     "validator": "^9.4.1",
     "zone.js": "^0.10.2"
   },
@@ -68,6 +67,7 @@
     "protractor": "^5.4.3",
     "supertest": "^4.0.2",
     "ts-node": "~8.6.2",
-    "tslint": "~5.7.0"
+    "tslint": "~5.7.0",
+    "typescript": "^3.6.5"
   }
 }
