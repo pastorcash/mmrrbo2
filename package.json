@@ -41,6 +41,7 @@
     "rxjs": "^6.5.4",
     "rxjs-compat": "^6.5.4",
     "tslib": "^1.11.0",
+    "typescript": "^3.7.5",
     "validator": "^9.4.1",
     "zone.js": "^0.10.2"
   },
