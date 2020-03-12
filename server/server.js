@@ -10,6 +10,7 @@ const { User } = require('./models/user');
 const { Location } = require('./models/location');
 const { Student } = require('./models/student');
 const { Course } = require('./models/course');
+const { Role } = require('./models/role');
 const { authenticate } = require('./middleware/authenticate');
 
 const app = express();
