@@ -43,6 +43,7 @@ describe('GET /users/me', () => {
   });
 });
 
+
 // ----- POST /users ----- //
 describe('POST /users', () => {
   it('Should create a user', (done) => {
@@ -84,7 +85,7 @@ describe('POST /users', () => {
 
     request(app)
       .post('/users')
-      .send({ email, 
+      .send({ email,
               password })
       .expect(400)
       .expect((res) => {
@@ -99,8 +100,8 @@ describe('POST /users', () => {
 
     request(app)
       .post('/users')
-      .send({ 
-        email, 
+      .send({
+        email,
         password })
       .expect(400)
       .expect((res) => {

@@ -7,14 +7,14 @@ const _ = require('lodash');
 const RoleSchema = new mongoose.Schema({
     roleName: {
       type: String,
-      unique: true,
+      unique: true,     // not a validator, used for optimization in Mongoose/Mongodb
       required: [true, 'Role name is required.'],
       trim: true,
       minlength: 3
     },
     roleDescription: {
         type: String,
-        unique: false,
+        unique: false,     // not a validator, used for optimization in Mongoose/Mongodb
         required: false,
         default: null,
         trim: true
@@ -24,9 +24,9 @@ const RoleSchema = new mongoose.Schema({
         required: [true, 'Toolbar option is required.'],
         /*validate: validators.isIn(
             'Admin',
-            'Multi', 
-            'Location', 
-            'Teacher', 
+            'Multi',
+            'Location',
+            'Teacher',
             'Parent'), */
         default: 'Teacher',
     },
@@ -34,14 +34,14 @@ const RoleSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Dashboard Display option is required.'],
 /*        validate: validators.isIn(
-            'Admin', 
-            'Grantor', 
-            'District', 
-            'Location', 
-            'Teacher', 
+            'Admin',
+            'Grantor',
+            'District',
+            'Location',
+            'Teacher',
             'Parent'), */
         trim: true,
-        default: 'Teacher'    
+        default: 'Teacher'
     },
     restrictedRole: {
         type: Boolean,

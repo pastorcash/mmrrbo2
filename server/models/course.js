@@ -35,7 +35,7 @@ const attendanceSchema = new mongoose.Schema({
 const CourseSchema = new mongoose.Schema({
   name: {
     type: String,
-    unique: true,
+    unique: true,     // not a validator, used for optimization in Mongoose/Mongodb
     required: [true, 'Course/class name is required.'],
     trim: true,
     minlength: 3,
@@ -59,7 +59,7 @@ const CourseSchema = new mongoose.Schema({
   }],
   status: {
     type: String,
-    required: false, 
+    required: false,
     default: 'active',
   },
   createdAt: {

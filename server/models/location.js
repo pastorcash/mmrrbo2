@@ -10,7 +10,7 @@ const { Course } = require('./course');
 const LocationSchema = new mongoose.Schema({
   name: {
     type: String,
-    unique: true,
+    unique: true,   // not a validator, used for optimization in Mongoose/Mongodb
     required: [true, 'Location name is required.'],
     trim: true,
     minlength: 3,

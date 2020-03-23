@@ -10,7 +10,7 @@ const UserSchema = new mongoose.Schema({
   userName: {
     type: String,
     required: [true, 'Username is required.'],
-    unique: true,
+    unique: true,  // not a validator, used for optimization in Mongoose/Mongodb
     trim: true,
     minlength: 6,
   },
@@ -31,7 +31,7 @@ const UserSchema = new mongoose.Schema({
     required: [true, 'User email is required'],
     trim: true,
     minlength: 1,
-    unique: true,
+    unique: true,   // not a validator, used for optimization in Mongoose/Mongodb
     validate: {
       isAsync: true,
       validator: validator.isEmail,
@@ -45,7 +45,7 @@ const UserSchema = new mongoose.Schema({
   },
   roles: {
     type: Array,
-    default: ['teacher'],
+    default: ['Teacher'],
   },
   employmentType: {
     type: String,

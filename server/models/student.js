@@ -11,14 +11,14 @@ const _ = require('lodash');
 const StudentSchema = new mongoose.Schema({
   firstName: {
     type: String,
-    unique: false,
+    unique: false,   // not a validator, used for optimization in Mongoose/Mongodb
     required: [true, 'First name is required.'],
     trim: true,
     minlength: 3,
   },
   lastName: {
     type: String,
-    unique: false,
+    unique: false,   // not a validator, used for optimization in Mongoose/Mongodb
     required: [true, 'Last name is required.'],
     trim: true,
     minlength: 3,
@@ -26,6 +26,7 @@ const StudentSchema = new mongoose.Schema({
   gender: {
     type: String,
     required: false,
+    enum: ['male', 'female'],
  //   validate: validators.isIn('male', 'female'),
     trim: true,
     default: null,
@@ -57,6 +58,7 @@ const StudentSchema = new mongoose.Schema({
   status: {
     type: String,
     required: true,
+    enum: ['active', 'hold', 'archive', 'trial'],
 //    validate: validators.isIn('active', 'hold', 'archive', 'trial'),
     trim: true,
     default: 'active',
@@ -83,7 +85,7 @@ const StudentSchema = new mongoose.Schema({
   notes: {
     type: String,
     required: false,
-  }, 
+  },
   enrolled: {
     type: Boolean,
     default: false,

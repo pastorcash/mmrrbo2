@@ -16,6 +16,19 @@ const { authenticate } = require('./middleware/authenticate');
 const app = express();
 const port = process.env.PORT;
 
+app.use((req, res, next) => {
+   res.setHeader("Access-Allow-Control-Origin", "*");
+   res.setHeader(
+     "Access-Allow-Control-Headers",
+     "ORIGIN, X-Requested-With, Content-Type, Accept"
+   );
+   res.setHeader(
+     "Access-Allow-Control-Headers",
+     "GET, POST, PUT, PATCH, DELETE"
+   )
+   next();
+})
+
 app.use(bodyParser.json());
 
 // ------------------------------- USERS ------------------------------------- //
@@ -70,12 +83,12 @@ app.get('/teachers/:status', async (req, res) => {
   try {
     const status = req.params.status;
     if (status === 'all') {
-      const users = await User.find({}).where('roles').in(['teacher']);
+      const users = await User.find({}).where('roles').in(['Teacher']);
       res.send({users});
     } else {
-      const users = await User.find({status}).where('roles').in(['teacher']);
+      const users = await User.find({status}).where('roles').in(['Teacher']);
       // const users = await User.findByRole('teacher', status);
-      
+
       res.send({users});
     }
   } catch (e) {
@@ -96,19 +109,19 @@ app.get('/location/teachers/:id.:status', async (req, res) => {
   }
     // *** Set up conditions for query here .....
     // a) vld/rtv location for array of teachers
-    // b) status 
+    // b) status
 
     // *** Later refactor option may be to exclude this validation,
     //     as it will be coming "from" a previous location route already validated.
     const location = await Location.findOne({_id: id});
 
     if (status === 'all') {
-      const users = await User.find({}).where('roles').in(['teacher']);
+      const users = await User.find({}).where('roles').in(['Teacher']);
       res.send({users});
     } else {
-      const users = await User.find({status}).where('roles').in(['teacher']);
+      const users = await User.find({status}).where('roles').in(['Teacher']);
       // const users = await User.findByRole('teacher', status);
-      
+
       res.send({users});
     }
   } catch (e) {
@@ -145,7 +158,7 @@ try {
 }
 });
 
-// ----- GET /locations (LIST) ----- // 
+// ----- GET /locations (LIST) ----- //
 app.get('/location', async (req, res) => {
   try {
     const locations = await Location.find({});
@@ -170,7 +183,7 @@ app.post('/student', async (req, res) => {
   }
 });
 
-// ----- GET /student (LIST) ----- // 
+// ----- GET /student (LIST) ----- //
 app.get('/student/:status', async (req, res) => {
   try {
     const status = req.params.status;
@@ -208,11 +221,11 @@ app.get('/location/students/:id.:status', async (req, res) => {
 
         if (status === 'all' || status === student.status) {
           assignedStudents.push(student);
-        }  
+        }
       }
     } catch (e) {
-      res.status(400).send();  
-    } 
+      res.status(400).send();
+    }
         console.log(`Final array ${assignedStudents}`);
     res.send(assignedStudents);
 

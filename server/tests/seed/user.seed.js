@@ -17,7 +17,7 @@ const users = [{
   lastName: 'Doe',
   email: 'JDoe880@gmail.com',
   password: 'userOnePass',
-  roles: ['teacher'],
+  roles: ['Teacher'],
   employmentType: 'W-2',
   status: 'active',
   tokens: [{
@@ -30,10 +30,10 @@ const users = [{
   _id: userTwoId,
   userName: 'JaneDoe',
   firstName: 'Jane',
-  lastName: 'Doe',   
+  lastName: 'Doe',
   email: 'jnDoe881@gmail.com',
   password: 'userTwoPass',
-  roles: ['teacher'],
+  roles: ['Teacher'],
   employmentType: '1099',
   status: 'hold',
   tokens: [{
@@ -46,10 +46,10 @@ const users = [{
   _id: userThreeId,
   userName: 'pastorcash',
   firstName: 'Cash',
-  lastName: 'Myers',   
+  lastName: 'Myers',
   email: 'cmyers880@gmail.com',
   password: 'userThreePass',
-  roles: ['admin'],
+  roles: ['Admin'],
   employmentType: '1099',
   status: 'active',
   tokens: [{
@@ -64,7 +64,7 @@ const users = [{
 // Now populate documents/data tables
 const populateUsers = async () => {
   try {
-  await User.remove({}); 
+  await User.remove({});
   const userOne = await new User(users[0]).save();
   const userTwo = await new User(users[1]).save();
   const userThree = await new User(users[2]).save();
